@@ -1,0 +1,124 @@
+# General aliases
+alias cl='clear'
+alias subl='sublime'
+alias home='cd ~'
+alias bashconfig='subl /usr/local/bin/.bash_profile'
+alias dt='cd ~/Desktop'
+alias dw='cd ~/Downloads'
+alias docs='cd ~/Documents'
+alias github='cd ~/Documents/GitHub'
+alias mightydesk='cd ~/Documents/MightyDesk'
+alias dplat='cd ~/Documents/DPlat'
+alias up='cd ..'
+alias bashupdate='source .bash_profile'
+
+#GitHub aliases
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git diff'
+alias gp='git push'
+alias gs='git status'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gpl='git pull'
+alias gpom='git pull origin master'
+
+#Node aliases
+alias npmi='npm install --save'
+alias npmid='npm install --save-dev'
+alias npmig='npm install -g'
+
+#Python aliases
+alias pipi='sudo pip install'
+alias py='python'
+
+# Make and cd into a new directory
+mkcd () {
+  mkdir $1
+  cd $1
+}
+
+# Shortcut functions
+chrome () {
+  open -a "Google Chrome" "$1"
+}
+
+slack () {
+  open -a "Slack"
+}
+
+spotify () {
+  open -a "Spotify"
+}
+
+pycharm () {
+  open -a "Pycharm" "$1"
+}
+
+intellij () {
+  open -a "IntelliJ IDEA 14 CE" "$1"
+}
+
+hipchat () {
+  open -a "Hipchat"
+}
+
+dash () {
+  open -a "Dash"
+}
+
+mail () {
+  open -a "Mail"
+}
+
+# Open up new browswer tabs
+stackoverflow () {
+  open -a "Google Chrome" "http://stackoverflow.com"
+}
+
+mlb () {
+  open -a "Google Chrome" "http://mlb.com"
+}
+
+espn () {
+  open -a "Google Chrome" "http://espn.com"
+}
+
+facebook () {
+  open -a "Google Chrome" "http://facebook.com"
+}
+
+twitter () {
+  open -a "Google Chrome" "http://twitter.com"
+}
+
+linkedin () {
+  open -a "Google Chrome" "http://linkedin.com"
+}
+
+youtube () {
+  open -a "Google Chrome" "http://youtube.com"
+}
+
+browse () {
+  open -a "Google Chrome" "http://$1"
+}
+
+gmail () {
+  open -a "Google Chrome" "http://mail.google.com"
+}
+
+# Clone repo, cd into it, open in sublime
+clone () {
+  url=$1
+  reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//')
+  gcl $url $reponame
+  cd $reponame
+  subl .
+}
+
+
+
+
+
